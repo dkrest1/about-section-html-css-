@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>about</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 20px;
+                font-size: 16px;
+                font-family: "lato", sans-serif;
+                font-weight: 700;
+                color: #777
+            }
+
+            .section-about {
+                background-color: #f7f7f7;
+                padding: 80px 0;
+            }
+            
+            .text-align {
+                text-align: center;
+            }
+
+            .primary-heading {
+                font-size: 35px;
+                margin-bottom: 80px; 
+                text-transform: uppercase;
+                display: inline-block; 
+                background-image: linear-gradient(to right, #1c1cb9b3, #0000ffcc);
+                -webkit-background-clip: text;
+                color: transparent;
+                transition: all .3s;
+                letter-spacing: 2px;
+            }
+
+            .primary-heading:hover {
+                transform: skewY(2deg) skewX(15deg) scale(1.1);
+               //box-shadow: 0.5rem 1rem 2rem rgba(3, 1, 1, 0.4);
+            }
+
+            .grid {
+                width: 1140px;
+                margin: 0 auto;
+            }
+
+            .row:not(:last-child) {
+                margin-bottom: 80px;
+            }
+
+            .row [class^="col-"]:not(:last-child) {
+                margin-right: 60px;
+            }
+
+            .row [class^="col-"] {
+                float: left;
+            }
+
+            .row::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .col-1-of-2 {
+                width: calc((100% - 60px) / 2)
+            }
+
+            .secondary-heading {
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+
+            .paragraph:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            .paragraph {
+                line-height: 1.7em;
+                font-weight: 700;
+            }
+
+            .image {
+                position: relative;
+            }
+
+            .image-design {
+                position: absolute;
+                border-radius: 2px;
+                width: 55%;
+                box-shadow: 0 15px 40px rgba(black, .4);
+                z-index: 10;
+                outline-offset: 20px;
+                transition: all .3s;
+
+            }
+
+            .image-design__1 {
+                top: -20px;
+                left: 0;
+            }
+
+            .image-design__2 {
+                right: 0;
+                top: 20px;
+            }
+
+            .image-design__3 {
+                top: 100px;
+                left: 20%;
+            }
+            
+            .image-design:hover {
+                outline: 15px solid blue;
+                transform: scale(1.1) translateY(-1.5px);
+                z-index: 20;
+            }
+
+            .image:hover .image-design:not(:hover) {
+                transform: scale(.90);
+            }
+
+            .learn-more:link,
+            .learn-more:visited {
+                text-decoration: none;
+                display: inline-block;
+                padding: 8px;
+                color: blue;
+                border-bottom: 1px solid blue;
+                transition: all .3s;
+            }
+
+            .learn-more:hover {
+                background-color: blue;
+                border-radius: 2px;
+                color: #f7f7f7;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, .4);
+                transform: translateY(-2px); 
+            }
+
+            .learn-more:active {
+                transform: translateY(0);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+            }
+
+        </style>
+</head>
+<body>
+        <div class="section-about">
+            <div class="text-align">
+                <h2 class="primary-heading">my best catalogue of pictures presently for you</h2>
+            </div>
+
+            <div class="grid">
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="secondary-heading">pictures speaks alot you know that?</h3>
+                        <p class="paragraph">you know pictures speaks alot? incase you dont know he does and this is gonna when i have big money , sure i'm gonna be fresher and dope, sleak.</p>
+                        <h3 class="secondary-heading">a little about me</h3>
+                        <p class="paragraph">I'm currently teaching my self to become a web developer, front end first , then a full stack, i know it require time but i will get there.</p>
+                        <a class="learn-more" href="#">read more&rarr;</a>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <div class="image">
+                            <img src="images/dkrest1.jpg" alt="dkrest" class="image-design image-design__1">
+                            <img src="images/dkrest2.jpg" alt="dkrest" class="image-design image-design__2">
+                            <img src="images/dkrest3.jpg" alt="dkrest" class="image-design image-design__3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        
+        </div>
+    
+</body>
+</html>
